@@ -1,0 +1,61 @@
+@use "../node_modules/spices-fruitui/src/scss/lib/import/basket" as * with (
+  $base: true,
+  $flex: true,
+  $grid: true,
+  $components: (
+    base: (
+      button: ture,
+      navbar: ture,
+      card: ture,
+      // forms: ture,
+      // checkers: ture,
+    ),
+    other: (
+    //   badge: true,
+      table: true,
+    //   alert: true,
+    //   slider: true,
+    ),
+    // awesome: (
+    //   prototype: ture,
+    // ),,
+  ),
+  $typography-util: true,
+  $spacing-util: true,
+  $align-util: true,
+  $other-util: true,
+  $size-util: true,
+  $ui-colors: true,
+  $media-font: true,
+  $animPlugin: true,
+  $colors: (
+    theme: (
+      50: #131b21ff,
+      100: #6290c8ff,
+      200: #f7ee7fff,
+      300: #f87575ff,
+    ),
+  )
+);
+
+* {
+  user-select: none;
+}
+
+.text-gray-50 {
+  color: #f9fafb !important;
+}
+
+.text-gray-100 {
+  color: #f3f4f6 !important;
+}
+
+.card {
+  border-color: theme(yellow, 400);
+}
+
+@include useShades(900, 50);
+
+@include renderFrame('slideTop');
+@include renderFrame('fadeIn');
+@include renderFrame('showUp');
